@@ -1,0 +1,147 @@
+@import '../color-variables.scss';
+@import '../mixins.scss';
+
+.container {
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  .box-conversion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    min-width: 540px;
+    border-radius: 16px;
+    box-shadow: rgba(53, 9, 72, 0.1);
+
+    &__card {
+      padding: 32px;
+      height: max-content;
+
+      .title {
+        font-family: 'Exo 2';
+        font-size: 24px;
+        color: $title;
+        font-weight: 700;
+
+        .hightlight {
+          color: $main;
+        }
+      }
+
+      .rate {
+        font-family: 'Poppins';
+        margin-top: 8px;
+        font-size: 14px;
+        font-weight: 500;
+        color: $title;
+        margin-bottom: 24px;
+      }
+
+      .box-from {
+        background-color: $card2;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 18px 16px;
+        border-radius: 15px;
+        font-family: 'Poppins';
+        gap: 24px;
+
+        .input-form {
+          flex-direction: column;
+          color: $title2;
+
+          .title {
+            margin-bottom: 8px;
+            font-size: 18px;
+            font-family: 'Poppins';
+            font-weight: 500;
+            color: $title2;
+          }
+
+          .est-balance {
+            font-family: 'Exo 2';
+            font-size: 32px;
+            font-weight: 500;
+            color: $title;
+            width: 248px;
+            display: -webkit-box;
+            -webkit-line-clamp: 1; /* Number of lines you want to display */
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+        }
+
+        .content {
+          flex-direction: column;
+          align-items: end;
+          justify-content: end;
+
+          .voy-title {
+            flex-direction: row;
+            align-items: center;
+            padding: 3px 6px;
+            background-color: white;
+            border-radius: 22px;
+            gap: 6px;
+            color: $title;
+            font-size: 14px;
+            font-weight: 500;
+          }
+
+          .balance {
+            color: $title2;
+            font-size: 14px;
+            margin-top: 6px;
+
+            .text {
+              width: 70px;
+              display: -webkit-box;
+              -webkit-line-clamp: 1; /* Number of lines you want to display */
+              -webkit-box-orient: vertical;
+              overflow: hidden;
+              text-overflow: ellipsis;
+            }
+
+            .color_vault {
+              font-weight: 500;
+              color: $title3;
+            }
+          }
+        }
+      }
+
+      .btn-convert {
+        font-family: 'Exo 2';
+        text-transform: uppercase;
+        margin-top: 24px;
+      }
+
+      .errForm {
+        border: 1px solid $error;
+      }
+
+      .errBalance {
+        font-family: 'Poppins';
+        font-size: 14px;
+        color: $error;
+        margin-top: 8px;
+      }
+
+      .btn-swap {
+        display: flex;
+        justify-content: center;
+        margin: 16px 0;
+
+        & > button {
+          padding: 11px;
+          width: fit-content;
+          height: fit-content;
+        }
+      }
+    }
+  }
+}

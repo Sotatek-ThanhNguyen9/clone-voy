@@ -1,0 +1,13 @@
+.base-page-container {
+  min-height: calc(100vh - 50px);
+  padding-top: 72px;
+
+  &__content {
+    max-width: 1440px;
+
+    &--full {
+      max-width: initial;
+      padding: 0;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+@import '../color-variables.scss';
+@import '../mixins.scss';
+
+.container {
+  flex-direction: column;
+  font-family: 'Poppins';
+  justify-content: center;
+  align-items: center;
+  min-height: 600px;
+
+  .title {
+    font-size: 100px;
+    color: $title2;
+    font-weight: 500;
+  }
+  .content {
+    font-size: 32px;
+    font-weight: 500;
+    color: $title;
+    margin-top: 20px;
+  }
+
+  .desc {
+    margin-bottom: 10px;
+    color: $title2;
+  }
+}

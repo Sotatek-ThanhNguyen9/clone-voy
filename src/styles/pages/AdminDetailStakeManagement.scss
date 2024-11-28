@@ -1,0 +1,164 @@
+@import '../color-variables.scss';
+@import '../mixins.scss';
+
+.admin-detail-stake-management-page {
+  padding: 24px 24px 50px;
+  width: 100%;
+  overflow: auto;
+
+  .title {
+    font-family: 'Exo 2';
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    font-weight: 700;
+    font-size: 32px;
+    color: $title;
+    line-height: 40px;
+  }
+
+  .dashboard {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 16px;
+    margin-top: 16px;
+
+    .dashboard-detail {
+      width: 25%;
+      height: 106px;
+      padding: 20px 24px;
+      border-radius: 16px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      object-fit: cover;
+
+      .title-dashboard {
+        flex-direction: row;
+        align-items: center;
+        min-height: 24px;
+        gap: 8px;
+        font-family: 'Poppins';
+        font-size: 14px;
+        color: $white;
+
+        & > p {
+          opacity: 0.7;
+        }
+      }
+
+      .content-dashboard {
+        flex-direction: row;
+        gap: 6px;
+        color: $white;
+        align-items: end;
+        margin-top: 12px;
+
+        .amount {
+          font-family: 'Exo 2';
+          font-weight: 700;
+          font-size: 24px;
+          line-height: 28px;
+        }
+
+        .symbol {
+          font-family: 'Poppins';
+          font-size: 12px;
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+
+  .filter-dashboard {
+    margin-top: 32px;
+    flex-direction: column;
+    gap: 16px;
+
+    .input-search {
+      width: 320px;
+      font-family: 'Poppins';
+      font-size: 16px;
+      color: #222325;
+    }
+
+    .options-type {
+      font-family: 'Poppins';
+      align-items: center;
+      gap: 10px;
+      color: $title3;
+      font-size: 16px;
+      font-weight: 500;
+    }
+  }
+
+  .table {
+    margin-top: 24px;
+    font-family: 'Poppins';
+    color: $title;
+
+    .chakra-table__container {
+      width: 100%;
+      background-color: $white;
+      border-radius: 15px;
+
+      .header-detail-stake-management {
+        padding: 18px 24px;
+        width: 100%;
+        border-bottom: 1px solid $line;
+        font-size: 14px;
+        color: $title2;
+        margin-bottom: 8px;
+
+        .sort-time {
+          flex-direction: column;
+          justify-content: center;
+          margin-left: 8px;
+          color: #d9d9d9;
+
+          .active {
+            color: $main;
+          }
+
+          & > svg {
+            cursor: pointer;
+          }
+        }
+
+        .content {
+          width: 96%;
+          text-align: end;
+        }
+      }
+
+      .body-detail-stake-management {
+        font-weight: 500;
+        padding: 19px 24px;
+        white-space: wrap;
+        color: $title;
+        font-size: 16px;
+        align-items: center;
+
+        .details {
+          color: $main;
+          cursor: pointer;
+          text-align: end;
+          width: 100%;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+
+      .loading-container {
+        align-items: center;
+        justify-content: center;
+        height: calc(100vh - 320px);
+        color: $title;
+        font-family: 'Poppins';
+        font-size: 16px;
+        font-weight: 500;
+      }
+    }
+  }
+}

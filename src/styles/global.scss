@@ -1,0 +1,134 @@
+@import './icons.scss';
+@import './color-variables.scss';
+@import './mixins.scss';
+
+// iframe {
+//   display: none !important;
+// }
+
+.link {
+  color: $main !important;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  background-color: white;
+  height: 4px;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb {
+  background: #c7d2e1;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-corner {
+  background: #c7d2e1;
+}
+
+// hide eye icon in password input Edge, IE
+input::-ms-reveal,
+input::-ms-clear {
+  display: none;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.chakra-toast {
+  .chakra-toast__inner {
+    max-width: none;
+  }
+  .chakra-alert {
+    padding: 14px 57px 14px 14px;
+    display: flex;
+    align-items: center;
+  }
+  .chakra-alert__icon {
+    min-width: 20px;
+    min-height: 20px;
+  }
+  .chakra-alert__desc {
+    margin-left: 16px;
+    line-height: 36px;
+  }
+  button {
+    transform: translateY(-50%);
+    top: 50%;
+    right: 14px;
+  }
+}
+
+@keyframes scaleFade {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(2);
+    opacity: 0;
+  }
+}
+
+.loyalty-program-options {
+  &::-webkit-scrollbar {
+    width: 4px;
+    background-color: transparent;
+    height: 4px;
+    border-radius: 2px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: white;
+    border-radius: 2px;
+  }
+}
+
+#chakra-toast-manager-top-right {
+  z-index: 1000000 !important;
+}
+
+.chakra-toast .chakra-alert__desc {
+  line-height: 1.5;
+}
+
+.header-item.loading {
+  cursor: wait;
+}
+
+/* Hide the background track and customize the thumb */
+.scroll-container::-webkit-scrollbar {
+  width: 4px; /* Set height of horizontal scrollbar */
+}
+
+.scroll-container::-webkit-scrollbar-track {
+  background: transparent; /* Hide track background */
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background-color: #888; /* Color of the scrollbar thumb */
+  border-radius: 2px; /* Rounded corners on the thumb */
+}
+
+.scroll-container::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Darker color on hover */
+}
+
+/* For Firefox */
+.scroll-container {
+  scrollbar-width: 'thin'; /* Make the scrollbar thinner */
+  scrollbar-color: #888 transparent; /* Thumb and track colors */
+}
+
+iframe[id^='walletIframe'] {
+  display: none !important;
+}
+
+// .w3a-parent-container {
+//   display: none;
+// }

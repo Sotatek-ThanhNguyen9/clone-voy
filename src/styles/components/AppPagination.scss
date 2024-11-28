@@ -1,0 +1,69 @@
+@import '../color-variables.scss';
+@import '../mixins.scss';
+
+.app-pagination {
+  list-style-type: none;
+  display: flex;
+  margin: 25px 40px 0;
+
+  li {
+    @include text-small-regular;
+    margin: 0 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    color: $title2;
+
+    &:first-child {
+      background: #e4eeff;
+    }
+
+    &:last-child {
+      background: #e4eeff;
+    }
+
+    a {
+      min-width: 32px;
+      height: 32px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      & > svg {
+        color: $main;
+      }
+    }
+
+    &.selected {
+      background: $main;
+      color: #fff;
+    }
+
+    &:hover {
+      background: $main;
+      color: #fff;
+
+      &:first-child {
+        background: #e4eeff;
+      }
+
+      &:last-child {
+        background: #e4eeff;
+      }
+    }
+
+    &.disabled {
+      cursor: not-allowed;
+      opacity: 0.5;
+      a {
+        cursor: not-allowed;
+      }
+
+      &:hover {
+        background: inherit;
+        color: $main;
+      }
+    }
+  }
+}

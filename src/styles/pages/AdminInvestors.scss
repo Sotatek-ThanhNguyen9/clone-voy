@@ -1,0 +1,90 @@
+@import '../color-variables.scss';
+@import '../mixins.scss';
+
+.admin-investors-page {
+  padding: 24px;
+  width: 100%;
+  overflow: auto;
+  min-height: calc(100vh - 72px);
+
+  .title {
+    font-family: 'Exo 2';
+    font-weight: 700;
+    font-size: 32px;
+    color: $title;
+  }
+
+  .search {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+
+    .input-search {
+      width: 320px;
+      font-family: 'Poppins';
+      font-size: 16px;
+      color: #222325;
+    }
+    .select-tranche {
+      font-family: 'Poppins';
+      align-items: center;
+      gap: 10px;
+      color: $title3;
+      font-size: 16px;
+      font-weight: 500;
+    }
+  }
+  .table {
+    margin-top: 24px;
+    font-family: 'Poppins';
+
+    .chakra-table__container {
+      width: 100%;
+      background-color: $white;
+      border-radius: 15px;
+
+      .header-list {
+        padding: 18px 24px;
+        width: 100%;
+        border-bottom: 1px solid $line;
+        font-size: 14px;
+        color: $title2;
+        .amount {
+          width: 76%;
+          text-align: end;
+        }
+        .content {
+          width: 96%;
+          text-align: end;
+        }
+      }
+
+      .body-list {
+        padding: 19px 24px;
+        white-space: wrap;
+        color: $title;
+        font-size: 16px;
+        align-items: center;
+        .amount {
+          width: 76%;
+          text-align: end;
+        }
+        .content {
+          width: 96%;
+          text-align: end;
+        }
+      }
+
+      .loading-container {
+        align-items: center;
+        justify-content: center;
+        height: calc(100vh - 320px);
+        color: $title;
+        font-family: 'Poppins';
+        font-size: 16px;
+        font-weight: 500;
+      }
+    }
+  }
+}

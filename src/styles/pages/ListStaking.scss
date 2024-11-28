@@ -1,0 +1,83 @@
+@import '../color-variables.scss';
+@import '../mixins.scss';
+
+.list-staking {
+  width: 100%;
+  overflow: auto;
+  gap: 10px;
+  flex-direction: column;
+
+  .table {
+    font-family: 'Poppins';
+
+    .chakra-table__container {
+      width: 100%;
+      background-color: $white;
+      border-radius: 15px;
+
+      .header-list-stake {
+        padding: 18px 24px;
+        margin: 10px 18px 14px;
+        border-bottom: 1px solid $line;
+        font-size: 14px;
+        color: $title2;
+      }
+
+      .body-list-stake {
+        padding: 13px 24px;
+        margin: 0 18px;
+        border-radius: 10px;
+        white-space: wrap;
+        color: $title;
+        font-size: 16px;
+        align-items: center;
+
+        .stake {
+          align-items: center;
+          gap: 8px;
+          font-family: 'Poppins';
+          font-weight: 500;
+          font-size: 16px;
+        }
+
+        .earn {
+          align-items: center;
+          gap: 8px;
+        }
+
+        .btn-stake {
+          align-items: center;
+          gap: 16px;
+          justify-content: end;
+
+          .stake-btn {
+            font-family: 'Exo 2';
+            font-weight: 700;
+            font-size: 16px;
+            text-transform: uppercase;
+            line-height: 20px;
+          }
+
+          & > svg {
+            width: 18px;
+            height: 18px;
+          }
+        }
+      }
+
+      .bg-card {
+        background-color: $card2;
+      }
+
+      .loading-container {
+        align-items: center;
+        justify-content: center;
+        height: calc(100vh - 320px);
+        color: $title;
+        font-family: 'Poppins';
+        font-size: 16px;
+        font-weight: 500;
+      }
+    }
+  }
+}

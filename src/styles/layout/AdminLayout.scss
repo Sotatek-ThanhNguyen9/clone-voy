@@ -1,0 +1,42 @@
+@import '../color-variables.scss';
+@import '../mixins.scss';
+
+.admin-layout {
+  margin-top: 72px;
+  flex-direction: row;
+  height: calc(100% - 72px);
+  min-height: calc(100vh - 72px);
+  width: 100%;
+
+  .sidebar {
+    background-color: $white;
+    width: 248px;
+    padding-top: 16px;
+    flex-direction: column;
+    min-height: calc(100vh - 72px);
+    position: fixed;
+    z-index: 10;
+
+    .sidebar-item {
+      display: flex;
+      flex-direction: row;
+      padding: 8px 20px;
+      color: $title5;
+      font-family: 'Poppins';
+      font-weight: 600;
+      font-size: 16px;
+      gap: 16px;
+      margin-top: 5px;
+
+      &.active {
+        color: $main;
+      }
+    }
+  }
+
+  &__content {
+    width: calc(100% - 248px);
+    background-color: #f4f4f4;
+    margin-left: 248px;
+  }
+}

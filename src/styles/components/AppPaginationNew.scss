@@ -1,0 +1,104 @@
+@import '../color-variables.scss';
+@import '../mixins.scss';
+
+.app-pagination-box {
+  position: relative;
+}
+
+.app-pagination-new {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  height: 40px;
+
+  // All
+  li {
+    list-style: none;
+  }
+
+  // PreV, Next
+  .previous,
+  .next {
+    width: auto;
+    height: auto;
+    padding: 0;
+    user-select: none;
+
+    a {
+      width: 111px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0;
+
+      &:focus-visible {
+        outline: none;
+        box-shadow: none;
+      }
+    }
+
+    &.disabled a {
+      cursor: not-allowed;
+      opacity: 0.5;
+    }
+  }
+
+  .previous {
+    position: absolute;
+    left: 0;
+  }
+
+  .next {
+    position: absolute;
+    right: 0;
+  }
+
+  // Paging
+  li:not(.previous, .next) {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include mobile() {
+      display: none;
+    }
+
+    a {
+      // font
+      color: white;
+      font-size: 12px;
+      line-height: 18px;
+      font-weight: 400;
+      font-family: 'Poppins';
+      //
+      padding: 11px;
+      border-radius: 100px;
+      text-align: center;
+      //
+      width: 40px;
+
+      & > svg {
+        color: $main;
+      }
+    }
+
+    &.selected,
+    &:hover {
+      a {
+        background: $brandNew;
+        color: #020b20;
+      }
+    }
+
+    &.disabled {
+      cursor: not-allowed;
+      opacity: 0.5;
+      a {
+        cursor: not-allowed;
+      }
+    }
+  }
+}

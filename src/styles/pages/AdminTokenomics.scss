@@ -1,0 +1,87 @@
+@import '../color-variables.scss';
+@import '../mixins.scss';
+
+.admin-tokenomics-page {
+  padding: 24px 24px 50px;
+  width: 100%;
+  overflow: auto;
+
+  .title {
+    font-family: 'Exo 2';
+    font-weight: 700;
+    font-size: 32px;
+    color: $title;
+  }
+
+  .start-date {
+    font-family: 'Poppins';
+    font-size: 14px;
+    color: $title3;
+    gap: 4px;
+
+    .sub-title {
+      color: $title2;
+    }
+  }
+
+  .table {
+    margin-top: 24px;
+    font-family: 'Poppins';
+    color: $title;
+
+    .chakra-table__container {
+      width: 100%;
+      background-color: $white;
+      border-radius: 15px;
+
+      .header-tokenomics {
+        padding: 18px 24px;
+        width: 100%;
+        border-bottom: 1px solid $line;
+        font-size: 14px;
+        color: $title2;
+        margin-bottom: 8px;
+        .content {
+          width: 96%;
+          text-align: end;
+        }
+      }
+
+      .body-tokenomics {
+        font-weight: 500;
+        padding: 19px 24px;
+        white-space: wrap;
+        color: $title;
+        font-size: 16px;
+        align-items: center;
+
+        .content {
+          width: 96%;
+          text-align: end;
+        }
+      }
+
+      .footer-tokenomics {
+        padding: 18px 24px;
+        font-weight: 600;
+        border-top: 1px solid $line;
+
+        .content {
+          width: 96%;
+          text-align: end;
+          color: $main;
+        }
+      }
+
+      .loading-container {
+        align-items: center;
+        justify-content: center;
+        height: calc(100vh - 320px);
+        color: $title;
+        font-family: 'Poppins';
+        font-size: 16px;
+        font-weight: 500;
+      }
+    }
+  }
+}

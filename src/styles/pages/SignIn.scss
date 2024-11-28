@@ -1,0 +1,126 @@
+@import '../color-variables.scss';
+@import '../mixins.scss';
+
+.w3a-parent-container #w3a-modal#w3a-modal {
+  font-family: 'Poppins';
+
+  .w3a-header__logo img {
+    width: 80px;
+    margin: -25px 0 -10px;
+  }
+
+  .w3a-modal__inner {
+    border-color: $brandNew2;
+    background-color: $brandNew2;
+    border-radius: 10px;
+    min-height: 400px;
+  }
+  .w3a-modal__loader {
+    background-color: $brandNew2;
+  }
+
+  .t-btn.t-btn-tertiary:not([disabled]) {
+    background-color: $brandNew;
+    color: $bg1;
+  }
+
+  ul.w3a-adapter-list {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  input {
+    background-color: #0000;
+    border: none;
+    border-bottom: 1px solid #fff;
+    border-radius: 0;
+    box-shadow: none;
+    color: #fff;
+    outline: none;
+  }
+
+  button {
+    border-radius: 8px;
+  }
+
+  .w3ajs-social-logins {
+    button {
+      position: relative;
+      background-color: white;
+    }
+  }
+
+  [title='Google'],
+  [title='Microsoft'] {
+    img {
+      display: none;
+    }
+
+    &::after {
+      position: absolute;
+      top: 11px;
+    }
+  }
+
+  // hidden microsoft
+  .w3a-adapter-item:first-child {
+    grid-column: 5/1;
+  }
+
+  [title='Google'] {
+    &::after {
+      content: url('https://img.clerk.com/static/google.svg?width=32');
+    }
+  }
+
+  [title='Microsoft'] {
+    // hidden microsoft
+    display: none;
+    &::after {
+      content: url('https://img.clerk.com/static/microsoft.svg?width=32');
+    }
+  }
+
+  .w3a-adapter-item:nth-child(n + 2) {
+    display: none;
+  }
+
+  [alt='login-facebook'] {
+    width: 64px;
+    height: 64px;
+    padding-left: 64px;
+    background: url(https://img.clerk.com/static/microsoft.svg?width=64) left
+      top no-repeat;
+    border-radius: 50%;
+    background-size: 64px;
+  }
+
+  .w3ajs-close-btn {
+    display: none;
+  }
+
+  .w3a--text-right {
+    display: none;
+  }
+
+  .w3ajs-external-wallet {
+    display: none;
+  }
+
+  .w3a-header__subtitle {
+    display: none;
+  }
+
+  .w3a-social__policy {
+    display: none;
+  }
+
+  .w3a-modal__content .w3ajs-content {
+    padding-top: 0;
+  }
+
+  .w3a-group__title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 28px;
+  }
+}

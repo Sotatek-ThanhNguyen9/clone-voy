@@ -1,0 +1,100 @@
+@import '../color-variables.scss';
+@import '../mixins.scss';
+
+.container-stake {
+  gap: 16px;
+
+  .content-stake {
+    padding: 16px;
+    border-radius: 12px;
+    background-color: $card3;
+    flex-direction: column;
+    gap: 12px;
+    font-family: 'Poppins';
+    font-size: 16px;
+    color: $title;
+
+    .token {
+      display: flex;
+      flex-direction: row;
+      gap: 8px;
+      font-weight: 600;
+    }
+  }
+
+  .detail-stake {
+    padding: 16px;
+    border-radius: 12px;
+    border: 1px solid $line;
+    flex-direction: column;
+
+    .available {
+      font-family: 'Poppins';
+      font-size: 14px;
+      color: $title2;
+    }
+
+    .balance {
+      font-family: 'Exo 2';
+      font-size: 24px;
+      font-weight: 700;
+      color: $title7;
+    }
+
+    .errorInput {
+      border: 1px solid $error;
+    }
+
+    .errBalance {
+      font-family: 'Poppins';
+      font-size: 14px;
+      color: $error;
+      margin-top: 8px;
+    }
+
+    .stake-amount {
+      margin: 24px 0 8px 0;
+      font-family: 'Poppins';
+      font-size: 12px;
+      color: $title2;
+    }
+
+    .max {
+      font-family: 'Poppins';
+      font-size: 16px;
+      font-weight: 500;
+      color: $main;
+      padding-right: 16px;
+      cursor: pointer;
+    }
+
+    .time-lock {
+      margin-top: 12px;
+      flex-direction: row;
+      gap: 4px;
+
+      .time {
+        padding: 3px 12px;
+        background-color: $card2;
+        border-radius: 40px;
+        cursor: pointer;
+        font-family: 'Poppins';
+        font-size: 14px;
+        color: $title3;
+      }
+      .active {
+        background-color: $main;
+        color: $white;
+      }
+    }
+  }
+
+  .stake-btn {
+    height: 48px;
+    text-transform: uppercase;
+    font-family: 'Exo 2';
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: 700;
+  }
+}

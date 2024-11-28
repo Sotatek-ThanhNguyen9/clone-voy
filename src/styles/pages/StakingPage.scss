@@ -1,0 +1,49 @@
+@import '../color-variables.scss';
+@import '../mixins.scss';
+
+.staking-page {
+  width: 100%;
+  overflow: auto;
+  gap: 8px;
+  flex-direction: column;
+  padding-bottom: 100px;
+
+  .balance-point {
+    max-width: 1240px;
+    border-radius: 16px;
+    width: 96vw;
+    height: 104px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    padding: 18px 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+
+    .title {
+      flex-direction: row;
+      color: $line;
+      align-items: center;
+      font-family: 'Poppins';
+      font-size: 14px;
+      font-weight: 500;
+      gap: 6px;
+    }
+
+    .balance {
+      color: $white;
+      font-family: 'Exo 2';
+      font-size: 28px;
+      font-weight: 700;
+      & > span {
+        color: $line;
+        font-family: 'Poppins';
+        font-size: 16px;
+        font-weight: 400;
+      }
+    }
+  }
+}
